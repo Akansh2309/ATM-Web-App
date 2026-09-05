@@ -6,6 +6,13 @@ import os
 app = Flask(__name__)
 app.secret_key = 'super_secret_government_key'
 
+# Initialize database if it doesn't exist (Runs on Gunicorn startup too)
+if not os.path.exists('atm.db'):
+    try:
+        banking.setup_mock_data()
+    except Exception as e:
+        print("Error setting up mock data:", e)
+
 @app.route('/', methods=['GET', 'POST'])
 def login():
     if request.method == 'POST':
@@ -78,6 +85,4 @@ def logout():
     return redirect(url_for('login'))
 
 if __name__ == '__main__':
-    if not os.path.exists('atm.db'):
-        banking.setup_mock_data()
     app.run(debug=True)
