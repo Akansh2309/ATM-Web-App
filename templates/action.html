@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="action-screen">
+    <h2>{{ action_type|upper }} OPERATION</h2>
+    
+    <form method="POST" class="atm-form">
+        <div class="form-group">
+            <label>SOURCE ACCOUNT:</label>
+            <select name="account_id" required>
+                {% for acc in accounts %}
+                <option value="{{ acc.id }}">{{ acc.type }} - {{ acc.id }} (Bal: ${{ "%.2f"|format(acc.balance) }})</option>
+                {% endfor %}
+            </select>
+        </div>
+        
+        {% if action_type == 'transfer' %}
+        <div class="form-group">
+            <label>DESTINATION ACCOUNT ID:</label>
+            <input type="text" name="target_account" required>
+        </div>
+        {% endif %}
+        
+        <div class="form-group">
+            <label>AMOUNT ($):</label>
+            <input type="number" step="0.01" name="amount" required min="0.01">
+        </div>
+        
+        <div class="action-buttons">
+            <button type="submit" class="btn btn-primary">EXECUTE {{ action_type|upper }}</button>
+            <a href="{{ url_for('dashboard') }}" class="btn btn-danger">CANCEL</a>
+        </div>
+    </form>
+</div>
+{% endblock %}

@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="dashboard-screen">
+    <div class="dashboard-header">
+        <h2>MAIN MENU</h2>
+        <p>CARD: {{ card_number }}</p>
+        <a href="{{ url_for('logout') }}" class="btn btn-danger btn-small">TERMINATE SESSION</a>
+    </div>
+
+    <div class="account-summary">
+        <h3>ACCOUNT BALANCES</h3>
+        <table class="data-table">
+            <thead>
+                <tr>
+                    <th>ACCOUNT ID</th>
+                    <th>TYPE</th>
+                    <th>BALANCE</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for acc in accounts %}
+                <tr>
+                    <td>{{ acc.id }}</td>
+                    <td>{{ acc.type }}</td>
+                    <td class="currency">${{ "%.2f"|format(acc.balance) }}</td>
+                </tr>
+                {% else %}
+                <tr><td colspan="3">NO ACCOUNTS FOUND</td></tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+    <div class="action-grid">
+        <a href="{{ url_for('action', action_type='withdraw') }}" class="btn">WITHDRAW FUNDS</a>
+        <a href="{{ url_for('action', action_type='deposit') }}" class="btn">DEPOSIT FUNDS</a>
+        <a href="{{ url_for('action', action_type='transfer') }}" class="btn">TRANSFER FUNDS</a>
+        <a href="{{ url_for('action', action_type='tax') }}" class="btn">PAY TAXES</a>
+        <a href="{{ url_for('statement') }}" class="btn btn-secondary">VIEW STATEMENT</a>
+    </div>
+</div>
+{% endblock %}
