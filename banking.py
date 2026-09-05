@@ -114,7 +114,7 @@ def setup_mock_data():
     database.init_db()
     
     # Use create_user to properly hash PIN
-    user_id = database.create_user('1111222233334444', '1234', 'John Doe')
+    user_id = database.create_user('0000000000000007', '0007', 'Agent Demo')
     
     conn = database.get_connection()
     cursor = conn.cursor()

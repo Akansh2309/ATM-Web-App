@@ -1,44 +1,49 @@
-# 🏦 Federal Reserve Virtual ATM
+# 🏦 FEDERAL RESERVE VIRTUAL ATM TERMINAL
 
-[![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy?repo=https://github.com/akansh-shaw/ATM-Web-App)
+![Security Status](https://img.shields.io/badge/Security_Level-Maximum-darkred?style=for-the-badge) ![Python](https://img.shields.io/badge/System-Python_3.x-blue?style=for-the-badge&logo=python) ![Flask](https://img.shields.io/badge/Framework-Flask-black?style=for-the-badge&logo=flask) ![SQLite](https://img.shields.io/badge/Database-SQLite-003B57?style=for-the-badge&logo=sqlite)
 
-![ATM Banner](https://img.shields.io/badge/Status-Live%20on%20Render-brightgreen?style=for-the-badge) ![Python](https://img.shields.io/badge/Python-3.x-blue?style=for-the-badge&logo=python) ![Flask](https://img.shields.io/badge/Flask-Web%20Framework-black?style=for-the-badge&logo=flask) ![SQLite](https://img.shields.io/badge/SQLite-Database-003B57?style=for-the-badge&logo=sqlite)
+> **TERMINAL STATUS:** `ONLINE`
+> **LOCATION:** `SECURE UNDISCLOSED FACILITY`
 
-## 🚀 About This Project
-Welcome to the Virtual ATM Web App! Originally a command-line script, this project has been fully transformed into a **robust, official-looking Web Application**. 
+## 🚀 OVERVIEW
+Welcome to the **Federal Reserve Virtual ATM**. Originally conceptualized as a standard command-line interface, this system has been completely architected into a **high-security, brutalist Web Application**. 
 
-It simulates a highly secure, government-style ATM kiosk featuring real-time database transactions, encrypted credentials, and advanced banking logic.
+Designed to mimic a highly restricted government ATM kiosk, this terminal features real-time transactional databases, cryptographically hashed credentials, and advanced institutional banking logic.
 
-## ✨ Features
-* **🔒 Secure Authentication:** Multi-user support with Werkzeug-encrypted PIN hashing.
-* **🏦 Multi-Account System:** Manage both **Checking** and **Savings** accounts effortlessly.
-* **💸 Advanced Transactions:** Deposit, withdraw, transfer, and pay government taxes.
-* **📜 Transaction History:** View detailed, timestamped mini-statements for all activities.
-* **🎨 Official Kiosk UI:** A beautiful, responsive, dark-mode web interface mimicking a secure government ATM.
+## ✨ TERMINAL FEATURES
+* **🔒 Encrypted Authentication:** Multi-user framework secured with `Werkzeug` military-grade PIN hashing.
+* **🏦 Asset Management:** Seamlessly route funds between **Checking** and **Savings** asset accounts.
+* **💸 Advanced Operations:** 
+  * Strict withdrawal protocols with enforced overdraft protection mechanisms.
+  * Instantaneous inter-account asset transfers.
+  * **🏛️ Federal Tax Payments:** Direct channel to pay official government taxes and bonds.
+* **📜 Audit Logs:** Cryptographically timestamped mini-statements tracking every digital footprint.
+* **🎨 Brutalist UI:** A high-contrast, dark-mode web interface built for efficiency, security, and institutional authority.
 
-## 🛠️ The Tech Stack
-* **Backend:** Python 3 & Flask
-* **Database:** SQLite3
-* **Frontend:** HTML5, CSS3 (Custom Brutalist/Government styling)
-* **Deployment:** Render (with Gunicorn)
+## 🛠️ CORE INFRASTRUCTURE
+* **Backend:** Python 3 & Flask (WSGI Web Server)
+* **Data Layer:** SQLite3 Relational Database
+* **Frontend:** HTML5, CSS3 (Custom Government Brutalist Design)
+* **Deployment Architecture:** Render (Gunicorn Server)
 
-## 💻 How to Run It Locally
-Want to host your own ATM kiosk?
+## 💻 LOCAL TERMINAL BOOT SEQUENCE
+Authorized personnel may initialize the terminal locally using the following sequence:
 
-1. **Clone the repository:**
+1. **Clone the secure repository:**
    ```bash
-   git clone https://github.com/akansh-shaw/ATM-Web-App.git
+   git clone https://github.com/Akansh2309/ATM-Web-App.git
    cd ATM-Web-App
    ```
-2. **Install the dependencies:**
+2. **Install system dependencies:**
    ```bash
    pip install -r requirements.txt
    ```
-3. **Run the Flask server:**
+3. **Initialize the server:**
    ```bash
    python app.py
    ```
-4. **Access the ATM:** Open your browser and navigate to `http://localhost:5000`
+4. **Access the interface:** Navigate your secure browser to `http://localhost:5000`
 
 ---
-*Created by Akansh Shaw. Now upgraded into a full-stack Web Application!* ✌️
+*Architected and developed by Akansh Shaw. System upgraded to Full-Stack capabilities.* 
+*Unauthorized access is strictly monitored.*
